@@ -48,21 +48,23 @@ main {
     width: 90%;
     margin-top: 90px;
     font-weight: 4rem;
-    color: red;
+    color: var(--primary-text);
     margin-left: auto;
     margin-right: auto;
 }
+
 /* Main Close */
 
 /* header */
 
 .header {
-    background-color: #262626;
+    background-color: var(--header-bg);
     box-shadow: 1px 1px 4px 0 rgba(0, 0, 0, .1);
     position: fixed;
     width: 100%;
     z-index: 3;
     top: 0;
+    border-bottom: 1.5px solid var(--header-border-btm);
 }
 
 .header ul {
@@ -70,7 +72,7 @@ main {
     padding: 0;
     list-style: none;
     overflow: hidden;
-    background-color: #262626;
+    background-color: var(--header-bg);
 }
 
 
@@ -88,15 +90,16 @@ main {
 }
 
 /* Header item links  */
-.header ul li a {
-    color: white;
+.header ul li a, #toggle-theme {
+    color: var(--header-item-font);
 }
 
 .header li a:hover,
-.header .menu-btn:hover {
-    background-color: #3a3a3b;
-    color: white;
+.header .menu-btn:hover, #toggle-theme:hover {
+    background-color: var(--header-item-hover);
+    color: var(--header-item-font);
     user-select: none;
+    cursor: pointer;
 }
 
 
@@ -107,7 +110,7 @@ main {
     font-size: 3rem;
     padding: 10px 20px;
     text-decoration: none;
-    color: red;
+    color: var(--primary-text);
 }
 
 /* menu */
@@ -129,7 +132,7 @@ main {
 }
 
 .header .menu-icon .navicon {
-    background: white;
+    background: var(--hamburger-icon);
     display: block;
     height: 2px;
     position: relative;
@@ -139,7 +142,7 @@ main {
 
 .header .menu-icon .navicon:before,
 .header .menu-icon .navicon:after {
-    background: white;
+    background: var(--hamburger-icon);
     content: '';
     display: block;
     height: 100%;
@@ -162,7 +165,6 @@ main {
 .header .menu-btn {
     display: none;
 }
-
 /* menu btn close */
 
 /* Header menu dropdown styling open*/
@@ -174,6 +176,7 @@ main {
     background: transparent;
 }
 
+/* Hamburger menu button animation open */
 .header .menu-btn:checked~.menu-icon .navicon:before {
     transform: rotate(-45deg);
 }
@@ -186,6 +189,7 @@ main {
 .header .menu-btn:checked~.menu-icon:not(.steps) .navicon:after {
     top: 0;
 }
+/* Hamburger menu button animation close */
 
 /* Header menu dropdown styling close*/
 
@@ -196,7 +200,9 @@ main {
         float: left;
     }
 
-    .header li a, #change-theme-btn, .theme-button {
+    .header li a,
+    #change-theme-btn,
+    #toggle-theme {
         padding: 20px 30px;
     }
 
@@ -212,36 +218,33 @@ main {
 }
 
 /* Theme Switch Open */
-.theme-button {
+#toggle-theme {
     padding: 20px 20px;
 }
 
-.theme-button:hover {
-    user-select: none;
-    cursor: pointer;
-    background-color: #3a3a3b;
-    color: white;
-}
 /* Theme Switch Close */
 
 /* Colors Open */
-:root {
-    --body-bg: #ffffff;
-    --sidebar-bg: #181818;
-    --base-font:  #b3b3b3;
-    --base-font-alt: #ffffff;
-    --base-font-hover:  #ffffff;
-    --sidebar-border: rgba(24, 24, 24, 0.1);
-    --sidebar-icon: #fa2c48;
+/*Default Theme*/
+.default {
+    --primary-text: #ffffff;
+    --body-bg: #151718;
+    --header-bg: #111213;
+    --header-border-btm: #2f343f;
+    --header-item-font: #ffffff;
+    --header-item-hover: #252525;
+    --hamburger-icon: #ffffff;
 }
 
-[data-theme=dark] {
-    --body-bg: #1f1f1f;
-    --sidebar-bg: #181818;
-    --base-font:  #b3b3b3;
-    --base-font-alt: #ffffff;
-    --base-font-hover:  #ffffff;
-    --sidebar-border: rgba(255, 255, 255, 0.1);
-    --sidebar-icon: #fa2c48;
+/*Dark Theme*/
+.light {
+    --primary-text: #000000;
+    --body-bg: #e7e8eb;
+    --header-bg: #f5f6f7;
+    --header-border-btm: #d3d3d4;
+    --header-item-font: #111213;
+    --header-item-hover: #cccccc;
+    --hamburger-icon: #111213;
 }
+
 /* Colors Close */
