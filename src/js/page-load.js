@@ -1,10 +1,24 @@
 // load home page
 $(document).ready(function () {
-    // Comment this out for local testing
-    // $("#main").load("../DCU/src/html/sample.html");
+    $('.logo').click(function(){
+        $('#main').load("index.html")
+    });
 
-    // Comment this out for server testing
-    $("#main").load("src/html/sample.html");
+    $('#artists').click(function(){
+        $('li.active').removeClass('active');
+        $('#main').load("src/html/artists.html")
+        var $this = $(this);
+        if (!$this.hasClass('active')) {
+            $this.addClass('active');
+        }
+    });
 
-    $("#home").addClass('active');
+    $('#music').click(function(){
+        $('li.active').removeClass('active');
+        $('#main').load("src/html/music.html")
+        var $this = $(this);
+        if (!$this.hasClass('active')) {
+            $this.addClass('active');
+        }
+    });
 });
