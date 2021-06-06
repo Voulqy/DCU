@@ -14,35 +14,10 @@ body {
     font-size: 3rem;
 }
 
-
-/* iPhone X Portrait Layout Open */
-@media only screen and (min-device-width: 375px) and (max-device-width: 812px) and (-webkit-min-device-pixel-ratio: 3) and (orientation: portrait) {}
-
-/* iPhone X Portrait Layout Close */
-
-/* iPhone X Landscape Layout Open */
-@media only screen and (min-device-width: 375px) and (max-device-width: 812px) and (-webkit-min-device-pixel-ratio: 3) and (orientation: landscape) {}
-
-/* iPhone X Landscape Layout Close */
-
-/* iPad Pro 12.9 Portrait Layout Open */
-@media only screen and (min-device-width: 1024px) and (max-device-width: 1024px) and (orientation: portrait) and (-webkit-min-device-pixel-ratio: 2) {}
-
-/* iPad Pro 12.9 Portrait Layout Close */
-
-/* iPad Pro 12.9 Landscape Layout Open */
-@media only screen and (min-device-width: 1366px) and (max-device-width: 1366px) and (orientation: landscape) and (-webkit-min-device-pixel-ratio: 2) {}
-
-/* iPad Pro 12.9 Landscape Layout Close */
-
-
-/* //////////////////////////////////////////// */
-
-
-
 /* Main Open */
 #main {
     width: 90%;
+    max-width: 1100px;
     margin-top: 90px;
     font-weight: 4rem;
     color: var(--primary-text);
@@ -59,7 +34,7 @@ body {
     box-shadow: 1px 1px 4px 0 rgba(0, 0, 0, .1);
     position: fixed;
     width: 100%;
-    z-index: 3;
+    z-index: 9999;
     top: 0;
     border-bottom: 1.5px solid var(--header-border-btm);
 }
@@ -108,7 +83,6 @@ body {
     cursor: pointer;
     text-decoration: none;
 }
-
 
 /* Header logo */
 .header .logo {
@@ -220,11 +194,17 @@ body {
     .header .menu-icon {
         display: none;
     }
+
+    
 }
 
 @media (max-width: 48em) {
     th:nth-child(3), .track-plays {
         display: none;
+    }
+    
+    #album-name {
+        font-size: 2rem;
     }
 }
 
@@ -233,14 +213,72 @@ body {
 }
 /* Theme Switch Close */
 
+/* Album info page open */
+.album-info {
+    padding: 30px 0 25px 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-inline-start: 10px;
+    padding-inline-end: 10px;
+}
+
+.album-header {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 32px;
+}
+
+.album-artwork {
+    position: relative;
+    width: 100%;
+    max-width: 500px;
+    max-height: 500px;
+    -webkit-margin-start: auto;
+    margin-inline-start: auto;
+    -webkit-margin-end: auto;
+    margin-inline-end: auto;
+    z-index: 1001;
+    border-radius: 15px;
+}
+
+.album-metadata {
+    width: 100%;
+    text-align: center;
+    color: var(--album-name-font);
+    overflow-wrap: break-word;
+    user-select: none;
+}
+
+#album-name {
+    font-size: 2rem;
+}
+
+.album-meta {
+    margin-top: 4px;
+    color: var(--album-meta-font);
+    font-size: 1.2rem;
+    line-height: 1.25;
+    font-weight: 600;
+    letter-spacing: 0;
+}
+
+#copyright {
+    padding-top: 5px;
+    color: var(--album-footer-copyright);
+    font-size: 1.1rem;
+    font-weight: bold;
+} 
+/* Album info page close */
+
 /* Track list open */
 table {
-    width: 95%;
+    width: 100%;
+    /* max-width: 1000px; */
     margin: 0 auto;
     border-collapse: collapse;
     font-size: 1.7rem;
 }
-
 
 td, th {
     padding: .8em .5em;
@@ -281,6 +319,18 @@ tbody tr:hover {
     cursor: pointer;
     background-color: var(--track-list-row-hover);
 }
+
+.duration-icon {
+    fill: var(--duration-icon);
+    height: 20px;
+    width: 20px;
+    padding-top: 5px;
+}
+
+.album-footer{
+    width: 100%;
+    margin: 0 auto;
+}
 /* Track list close */
 
 /* Colors Open */
@@ -296,6 +346,10 @@ tbody tr:hover {
     --track-list-header-bg:  #232323;
     --track-list-row-alt-bg:  #232323;
     --track-list-row-hover: #252525;
+    --duration-icon: #ffffff;
+    --album-meta-font: #ffffff;
+    --album-name-font: #ffffff;
+    --album-footer-copyright: rgba(255, 255, 255, 0.5);
 }
 
 /*Dark Theme*/
@@ -310,6 +364,10 @@ tbody tr:hover {
     --track-list-header-bg:  #d3d3d4;
     --track-list-row-alt-bg:  #d3d3d4;
     --track-list-row-hover: #cccccc;
+    --duration-icon: #000000;
+    --album-meta-font: #4b4b4b;
+    --album-name-font: #111213;
+    --album-footer-copyright: rgba(0, 0, 0, 0.5);
 }
 
 /* Colors Close */
