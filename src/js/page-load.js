@@ -16,11 +16,23 @@ $(document).ready(function () {
 
     $('#music').click(function(){
         $('li.active').removeClass('active');
-        $('#main').load("src/html/music.html")
-        $('title').text("Music");
+        $('#main').load("src/html/discography.html")
+        $('title').text("Discography");
         var $this = $(this);
         if (!$this.hasClass('active')) {
             $this.addClass('active');
         }
     });
+});
+
+// Load individual album pages
+$('.discography-card').click(function(){
+    var albumId = this.id;
+    $("#main").load("src/html/albums/" + albumId + ".html");
+});
+
+// Load individual lyrics pages
+$('.song').click(function(){
+    var songId = this.id;
+    $("#main").load("src/html/songs/" + songId + ".html");
 });

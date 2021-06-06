@@ -292,6 +292,75 @@ tbody tr:hover {
 }
 /* Track list close */
 
+/* Discography open */
+.discography-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 20px;
+    /* background: teal; */
+    padding: 15px;
+}
+
+.discography-album-type {
+    width: 100%;
+    margin: 0 5px;
+    font-size: 4rem;
+    padding: 0;
+}
+
+.discography-container img {
+    max-width: 100%;
+    display: block;
+}
+
+.discography-container img:hover {
+    cursor: pointer;
+}
+
+.discography-album-type {
+    width: 100%;
+    margin: 0 15px;
+    font-size: 4rem;
+    padding: 0;
+}
+
+.discography-card:hover {
+    opacity: .85;
+}
+
+.discography-album-artwork {
+    border-radius: 8px;
+}
+
+.discography-album-title,
+.discography-album-date {
+    text-decoration: none;
+    font-weight: 400;
+    letter-spacing: 0;
+}
+
+.discography-album-date {
+    font-size: 1.5rem;
+    line-height: .1;
+    color: var(--album-meta-font);
+}
+
+.discography-album-date:hover {
+    user-select: none;
+}
+
+.discography-album-title {
+    color: var(--album-name-font);
+    word-break: break-word;
+    font-size: 1.8rem;
+    line-height: 1.5;
+    width: 100%;
+    font-weight: bold;
+}
+
+/* Discography close */
+
+/* Media queries open */
 @media (min-width: 48em) {
     .header li {
         float: left;
@@ -340,7 +409,7 @@ tbody tr:hover {
         font-size: .4em;
     }
 }
-
+/* Media queries close */
 /* Colors Open */
 /*Default Theme*/
 .default {
