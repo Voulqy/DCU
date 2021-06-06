@@ -1,30 +1,13 @@
-// function $(el) {
-//     return document.querySelector(el);
-// }
-
+// Change theme the theme button is clicked
 $('.toggle').click(function(){
+    // Assign the .default class from <body> to the $this variable
     var $this = $(".default");
+    // if <body> doesn't have the .light class, add it
     if (!$this.hasClass('light')) {
         $this.addClass('light')
-    } else {
+    } 
+    // if <body> does have the .light class tag, remove it
+    else {
         $this.removeClass('light')
     }
 })
-
-
-// js
-// let container = $('.container');
-// let toggle = $('#toggle-theme');
-
-// toggle.addEventListener('click', () => {
-//     let list = container.classList;
-
-//     if (list.contains('default')) {
-//         list.replace('default', 'light');
-//         toggle.textContent = 'Dark';
-//     } else {
-//         list.replace('light', 'default');
-//         toggle.textContent = 'Light';
-//     }
-
-// })

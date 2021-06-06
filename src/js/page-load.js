@@ -1,8 +1,8 @@
 // load home page
 $(document).ready(function(){
-    // $("#main").load("../src/html/sample.html");
+    $("#main").load("../src/html/sample.html");
 
-        $(".menu #home").addClass('active');
+        $("#home").addClass('active');
 });
 
 
