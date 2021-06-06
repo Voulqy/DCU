@@ -9,7 +9,7 @@ html {
 }
 
 body {
-    background-color: #181818;
+    background-color: var(--body-bg);
     color: white;
     font-size: 3rem;
 }
@@ -96,6 +96,7 @@ main {
 .header .menu-btn:hover {
     background-color: #3a3a3b;
     color: white;
+    user-select: none;
 }
 
 
@@ -195,11 +196,7 @@ main {
         float: left;
     }
 
-    .header li a {
-        padding: 20px 30px;
-    }
-
-    #change-theme-btn {
+    .header li a, #change-theme-btn, .theme-button {
         padding: 20px 30px;
     }
 
@@ -215,15 +212,12 @@ main {
 }
 
 /* Theme Switch Open */
-.dark-theme #change-theme-btn {
-    color: #222;
-}
-
-#change-theme-btn {
+.theme-button {
     padding: 20px 20px;
 }
 
-#change-theme-btn:hover {
+.theme-button:hover {
+    user-select: none;
     cursor: pointer;
     background-color: #3a3a3b;
     color: white;

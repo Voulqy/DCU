@@ -6,13 +6,14 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <!-- Styling for GitHub -->
     <link rel="stylesheet" type="text/css" href="/DCU/src/css/main.css">
     <!-- Styling for local testing -->
     <link rel="stylesheet" type="text/css" href="/src/css/main.css">
 </head>
 
-<body>
+<body data-theme="dark">
 
     <header class="header">
         <a href="" class="logo">CSS Nav</a>
@@ -22,7 +23,9 @@
           <li><a href="#work">Our Work</a></li>
           <li><a href="#about">About</a></li>
           <li><a href="#careers">Careers</a></li>
-          <li id="change-theme-btn">Theme</li>
+          <li class="toggle">
+            <div class="js-theme-btn theme-button">Theme</div>  
+            </li>
           <!-- <li><button id="change-theme-btn">theme</button></li> -->
         </ul>
       </header>
