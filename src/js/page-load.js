@@ -7,6 +7,7 @@ $(document).ready(function () {
     $('#artists').click(function(){
         $('li.active').removeClass('active');
         $('#main').load("src/html/artists.html")
+        $('title').text("Artists");
         var $this = $(this);
         if (!$this.hasClass('active')) {
             $this.addClass('active');
@@ -16,6 +17,7 @@ $(document).ready(function () {
     $('#music').click(function(){
         $('li.active').removeClass('active');
         $('#main').load("src/html/music.html")
+        $('title').text("Music");
         var $this = $(this);
         if (!$this.hasClass('active')) {
             $this.addClass('active');
