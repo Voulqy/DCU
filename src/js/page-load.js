@@ -1,5 +1,17 @@
+// const Cookies = require("cookies");
+// $(document).ready(function(){
+//     var currPage = Cookies.get('currPage');
+//     $("#main").load("src/html/" + currPage + ".html");
+// });
+
+// $('body').bind('onunload',function(){
+//     var currPage = Cookies.get('currPage');
+//     $("#main").load("src/html/" + currPage + ".html");
+// });
+
 // load home page
 $(document).ready(function () {
+    // Cookies.set('currPage', 'index');
     $('.logo').click(function(){
         $('#main').load("index.html")
     });
@@ -11,6 +23,7 @@ $(document).ready(function () {
         var $this = $(this);
         if (!$this.hasClass('active')) {
             $this.addClass('active');
+            // Cookies.set('currPage', 'artists');
         }
     });
 
@@ -21,6 +34,7 @@ $(document).ready(function () {
         var $this = $(this);
         if (!$this.hasClass('active')) {
             $this.addClass('active');
+            // Cookies.set('currPage', 'discography');
         }
     });
 });
