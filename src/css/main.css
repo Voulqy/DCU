@@ -360,6 +360,29 @@ tbody tr:hover {
 
 /* Discography close */
 
+/* Lyrics page Open */
+.lyrics-song-title:hover {
+    user-select: none;
+}
+/* Back button TO FIX open */
+/* .back-arrow-icon {
+    fill: var(--back-arrow-icon);
+    height: 35px;
+    width: 35px;
+}
+
+.back-arrow-icon:hover {
+    cursor: pointer;
+    fill: var(--back-arrow-icon-hover);
+}
+
+button {
+    border: none;
+    background-color: transparent;
+} */
+/* Back button TO FIX close */
+/* Lyrics page Close */
+
 /* Media queries open */
 @media (min-width: 48em) {
     .header li {
@@ -427,6 +450,8 @@ tbody tr:hover {
     --album-meta-font: #cccccc;
     --album-name-font: #ffffff;
     --album-footer-copyright: rgba(255, 255, 255, 0.5);
+    --back-arrow-icon: #ffffff;
+    --back-arrow-icon-hover: #cccccc;
 }
 
 /*Dark Theme*/
@@ -445,6 +470,8 @@ tbody tr:hover {
     --album-meta-font: #4b4b4b;
     --album-name-font: #111213;
     --album-footer-copyright: rgba(0, 0, 0, 0.5);
+    --back-arrow-icon: #000000;
+    --back-arrow-icon-hover: #4b4b4b;
 }
 
 /* Colors Close */

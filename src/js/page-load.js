@@ -36,3 +36,9 @@ $('.song').click(function(){
     var songId = this.id;
     $("#main").load("src/html/songs/" + songId + ".html");
 });
+
+// Go back a to the album page
+$('.go-back').click(function(){
+    var albumId = this.id;
+    $("#main").load("src/html/albums/" + albumId + ".html");
+});
