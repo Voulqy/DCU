@@ -236,7 +236,7 @@ table {
     /* max-width: 1000px; */
     margin: 0 auto;
     border-collapse: collapse;
-    font-size: 1.7rem;
+    font-size: 1.6rem;
 }
 
 td, th {
@@ -271,7 +271,7 @@ td:nth-child(2), th:nth-child(2) {
 }
 
 .track-len {
-    width: 80px;
+    width: 50px;
 }
 
 tbody tr:hover {
@@ -413,6 +413,14 @@ button {
 
     #copyright {
         font-size: .45em;
+    }
+
+    .track-len {
+        width: 80px;
+    }
+
+    table {
+        font-size: 1.7rem;
     }
 }
 
