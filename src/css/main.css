@@ -1,0 +1,247 @@
+html, body, .header ul {
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    font-size: 62.5%;
+}
+
+body {
+    background-color: var(--body-bg);
+}
+
+/* Header Open */
+/* SVG home logo */
+.home-logo {
+    display: block;
+    float: left;
+    padding: 10px 5px;
+    text-decoration: none;
+    fill: var(--home-logo-fill);
+    width: var(--home-logo-width);
+    width: var(--home-logo-height);
+}
+
+/* Header nav bar */
+.header {
+    background-color: var(--header-bg);
+    box-shadow: 1px 1px 4px var(--header-box-shadow);
+    position: fixed;
+    width: 100%;
+    z-index: 9999;
+    top: 0;
+    /* border-bottom: 1.5px solid var(--header-border-btm); */
+}
+
+/* Header menu*/
+.header .menu {
+    clear: both;
+    max-height: 0;
+    transition: max-height .2s ease-out;
+}
+
+/* Header hamburger menu open */
+/* Header menu icon styling */
+.header .menu-icon {
+    cursor: pointer;
+    /* display: inline-block; */
+    float: right;
+    padding: 38px 20px;
+    position: relative;
+    user-select: none;
+}
+
+.header .menu-icon .navicon {
+    background: var(--hmbrg-menu-icon);
+    display: block;
+    height: 2px;
+    position: relative;
+    transition: background .2s ease-out;
+    width: 18px;
+}
+
+.header .menu-icon .navicon:before,
+.header .menu-icon .navicon:after {
+    background: var(--hmbrg-menu-icon);
+    content: '';
+    display: block;
+    height: 100%;
+    position: absolute;
+    transition: all .2s ease-out;
+    width: 100%;
+}
+
+.header .menu-icon .navicon:before {
+    top: 8px;
+}
+
+.header .menu-icon .navicon:after {
+    top: -8px;
+}
+
+/* Header menu button */
+.header .menu-btn {
+    display: none;
+}
+
+/* Header menu dropdown styling */
+.header .menu-btn:checked~.menu {
+    max-height: 350px;
+}
+
+.header .menu-btn:checked~.menu-icon .navicon {
+    background: transparent;
+}
+
+/* Hamburger menu button animation */
+.header .menu-btn:checked~.menu-icon .navicon:before {
+    transform: rotate(-45deg);
+}
+
+.header .menu-btn:checked~.menu-icon .navicon:after {
+    transform: rotate(45deg);
+}
+
+.header .menu-btn:checked~.menu-icon:not(.steps) .navicon:before,
+.header .menu-btn:checked~.menu-icon:not(.steps) .navicon:after {
+    top: 0;
+}
+
+.active {
+    border-bottom: 1px solid;
+}
+/* Header hamburger menu close */
+
+/* Header nav ul */
+.header ul {
+    list-style: none;
+    overflow: hidden;
+    background-color: var(--header-btn);
+}
+
+/* Header nav list items */
+.header li {
+    display: block;
+    padding: 20px 20px;
+    font-size: var(--header-li-fnt-sz);
+    text-decoration: none;
+}
+
+/* Header nav list items & theme goggle font color */
+.header li, #toggle-theme, .header li:hover, .menu-btn:hover, .toggle:hover {
+    color: var(--header-item-fnt);
+}
+
+/* Header nav list items & menu button on hover */
+.header li:hover, .menu-btn:hover, .toggle:hover {
+    border-bottom: 1px solid;
+    user-select: none;
+    cursor: pointer;
+    text-decoration: none;
+}
+
+/* Header Close */
+
+/* Media queries open */
+@media (min-width: 48em) {
+    .header li {
+        float: left;
+    }
+
+    .header li {
+        padding: 20px 30px;
+    }
+
+    .header .menu {
+        clear: none;
+        float: right;
+        max-height: none;
+    }
+
+    .header .menu-icon {
+        display: none;
+    }
+/* 
+    #album-name {
+        font-size: 1.05em;
+    }
+
+    .album-meta {
+        font-size: .55em;
+    }
+
+    #copyright {
+        font-size: .45em;
+    }
+
+    .track-len {
+        width: 80px;
+    }
+
+    table {
+        font-size: 1.7rem;
+    }
+
+    .korean {
+        font-size: 6rem;
+    } */
+}
+
+@media (max-width: 48em) {
+    /* th:nth-child(3), .track-plays {
+        display: none;
+    }
+
+    #album-name {
+        font-size: .65em;
+    }
+
+    .album-meta {
+        font-size: .45em;
+    }
+    #copyright {
+        font-size: .4em;
+    }
+
+    .korean {
+        font-size: 3.25rem;
+    } */
+    
+}
+/* Media queries close */
+
+/* Colors Open */
+/* Default *Dark* Theme Open */
+.default {
+    --home-logo-fill: hsl(352, 95%, 58%);
+    --body-bg: hsl(200, 7%, 9%);
+    --header-bg: hsl(210, 6%, 7%); 
+    --header-box-shadow: hsla(0, 0%, 67%, 0.1);
+    --header-border-btm: hsl(221, 15%, 22%);
+    --header-btn: hsl(210, 6%, 7%);
+    --header-item-fnt: hsl(0, 0%, 100%);
+    --hmbrg-menu-icon: hsl(0, 0%, 100%);
+}
+/* Default *Dark* Theme Close */
+/* Light Theme Open */
+.light {
+    --home-logo-fill: hsl(352, 95%, 58%);
+    --body-bg: hsl(225, 9%, 91%);
+    --header-bg: hsl(210, 11%, 96%);
+    --header-box-shadow: hsla(0, 0%, 0%, 0.1);
+    --header-border-btm: hsl(240, 1%, 83%);
+    --header-btn: hsl(210, 11%, 96%);
+    --header-item-fnt: hsl(210, 6%, 7%);
+    --hmbrg-menu-icon: hsl(210, 6%, 7%); 
+}
+/* Light Theme Close */
+/* Colors Close */
+
+/* Other Values Open */
+:root {
+    --home-logo-width: 60px;
+    --home-logo-height: 60px;
+    --header-li-fnt-sz: 2rem;
+}
+/* Other Values Close */
